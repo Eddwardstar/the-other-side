@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Capítulo 3 — THE OTHER SIDE</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #050509;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .particles {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .particle {
+            position: absolute;
+            bottom: -10px;
+            width: 4px;
+            height: 4px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 0 10px white;
+            opacity: 0;
+            animation: subir 8s linear infinite;
+        }
+
+        .particle:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .particle:nth-child(2) { left: 30%; animation-delay: 2s; }
+        .particle:nth-child(3) { left: 50%; animation-delay: 4s; }
+        .particle:nth-child(4) { left: 70%; animation-delay: 1s; }
+        .particle:nth-child(5) { left: 90%; animation-delay: 3s; }
+
+        @keyframes subir {
+
+            0% {
+                transform: translateY(0);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: .8;
+            }
+
+            80% {
+                opacity: .8;
+            }
+
+            100% {
+                transform: translateY(-110vh);
+                opacity: 0;
+            }
+
+        }
+
+        header {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 90px 20px;
+            background:
+                radial-gradient(
+                    circle,
+                    #24113d 0%,
+                    #100b1d 40%,
+                    #050509 75%
+                );
+            border-bottom: 1px solid #3d2161;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 50px;
+            color: #d9c2ff;
+            text-shadow:
+                0 0 10px #8b5cf6,
+                0 0 30px #5b21b6;
+        }
+
+        header p {
+            color: #aaa0bb;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 20px;
+            background: #09090f;
+            border-bottom: 1px solid #21172d;
+        }
+
+        nav a {
+            color: #ddd3ed;
+            text-decoration: none;
+            margin: 5px;
+            padding: 10px 16px;
+            display: inline-block;
+            border: 1px solid #35264b;
+            border-radius: 8px;
+        }
+
+        nav a:hover {
+            background: #27133d;
+            border-color: #8b5cf6;
+        }
+
+        main {
+            position: relative;
+            z-index: 1;
+            max-width: 850px;
+            margin: auto;
+            padding: 70px 25px;
+        }
+
+        .capitulo {
+            background: rgba(18, 10, 28, .8);
+            border: 1px solid #352047;
+            border-radius: 12px;
+            padding: 40px;
+            line-height: 1.8;
+        }
+
+        .capitulo h2 {
+            color: #c9a9ff;
+            text-shadow: 0 0 10px #6d28d9;
+        }
+
+        .capitulo p {
+            color: #d0cad8;
+        }
+
+        footer {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 40px;
+            color: #70677c;
+            border-top: 1px solid #21172d;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="particles">
+
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+
+    </div>
+
+    <header>
+
+        <h1>THE OTHER SIDE</h1>
+
+        <p>CAPÍTULO 3</p>
+
+    </header>
+
+    <nav>
+
+        <a href="index.html">← Página principal</a>
+
+        <a href="capitulos.html">📖 Capítulos</a>
+
+    </nav>
+
+    <main>
+
+        <article class="capitulo">
+
+            <h2>CAPÍTULO 3 — O MISTÉRIO</h2>
+
+            <p>
+                Escreva aqui o terceiro capítulo de
+                THE OTHER SIDE.
+            </p>
+
+            <p>
+                Este capítulo pode continuar os acontecimentos
+                anteriores e aprofundar os mistérios da história.
+            </p>
+
+            <p>
+                Novas descobertas e acontecimentos importantes
+                podem ser adicionados aqui.
+            </p>
+
+        </article>
+
+    </main>
+
+    <footer>
+
+        THE OTHER SIDE © 2026
+
+    </footer>
+
+</body>
+
+</html>

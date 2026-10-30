@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Decoração — THE OTHER SIDE</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+
+            background: #050509;
+
+            color: white;
+
+            font-family: Arial, sans-serif;
+        }
+
+        /* PARTÍCULAS */
+
+        .particles {
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            pointer-events: none;
+
+            overflow: hidden;
+
+            z-index: 0;
+        }
+
+        .particle {
+            position: absolute;
+
+            bottom: -20px;
+
+            width: 4px;
+            height: 4px;
+
+            background: white;
+
+            border-radius: 50%;
+
+            opacity: 0;
+
+            box-shadow: 0 0 10px white;
+
+            animation: subir 8s linear infinite;
+        }
+
+        .particle:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .particle:nth-child(2) {
+            left: 25%;
+            animation-delay: 2s;
+        }
+
+        .particle:nth-child(3) {
+            left: 40%;
+            animation-delay: 4s;
+        }
+
+        .particle:nth-child(4) {
+            left: 55%;
+            animation-delay: 1s;
+        }
+
+        .particle:nth-child(5) {
+            left: 70%;
+            animation-delay: 3s;
+        }
+
+        .particle:nth-child(6) {
+            left: 85%;
+            animation-delay: 5s;
+        }
+
+        @keyframes subir {
+
+            0% {
+                transform: translateY(0);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0.8;
+            }
+
+            80% {
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translateY(-110vh);
+                opacity: 0;
+            }
+
+        }
+
+        /* CABEÇALHO */
+
+        header {
+            position: relative;
+
+            z-index: 1;
+
+            text-align: center;
+
+            padding: 100px 20px;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    #24113d 0%,
+                    #100b1d 35%,
+                    #050509 75%
+                );
+
+            border-bottom: 1px solid #3d2161;
+        }
+
+        header h1 {
+            margin: 0;
+
+            font-size: 55px;
+
+            letter-spacing: 8px;
+
+            color: #d9c2ff;
+
+            text-shadow:
+                0 0 10px #8b5cf6,
+                0 0 25px #5b21b6,
+                0 0 50px #312e81;
+        }
+
+        header p {
+            color: #b8a8d8;
+
+            font-size: 18px;
+
+            letter-spacing: 2px;
+        }
+
+        /* MENU */
+
+        nav {
+            position: relative;
+
+            z-index: 2;
+
+            text-align: center;
+
+            padding: 20px;
+
+            background: #09090f;
+
+            border-bottom: 1px solid #21172d;
+        }
+
+        nav a {
+            display: inline-block;
+
+            color: #ddd3ed;
+
+            text-decoration: none;
+
+            padding: 12px 20px;
+
+            margin: 5px;
+
+            border: 1px solid #35264b;
+
+            border-radius: 8px;
+
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: white;
+
+            background: #27133d;
+
+            border-color: #8b5cf6;
+
+            box-shadow:
+                0 0 15px #6d28d9;
+        }
+
+        /* CONTEÚDO */
+
+        main {
+            position: relative;
+
+            z-index: 1;
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 60px 25px;
+        }
+
+        .intro {
+            text-align: center;
+
+            margin-bottom: 50px;
+        }
+
+        .intro h2 {
+            font-size: 38px;
+
+            color: #d8c7ff;
+
+            text-shadow:
+                0 0 10px #6d28d9;
+        }
+
+        .intro p {
+            color: #c8c2d1;
+
+            line-height: 1.7;
+        }
+
+        /* GALERIA */
+
+        .galeria {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(250px, 1fr));
+
+            gap: 25px;
+        }
+
+        .imagem-box {
+            min-height: 220px;
+
+            padding: 20px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            background: rgba(18, 10, 28, 0.8);
+
+            border: 1px solid #352047;
+
+            border-radius: 10px;
+
+            transition: 0.3s;
+        }
+
+        .imagem-box:hover {
+            transform: translateY(-8px);
+
+            border-color: #8b5cf6;
+
+            box-shadow:
+                0 0 25px rgba(139, 92, 246, 0.3);
+        }
+
+        .imagem-box p {
+            color: #a99bb8;
+        }
+
+        /* RODAPÉ */
+
+        footer {
+            position: relative;
+
+            z-index: 1;
+
+            text-align: center;
+
+            padding: 45px 20px;
+
+            background: #08080d;
+
+            color: #70677c;
+
+            border-top: 1px solid #21172d;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- PARTÍCULAS -->
+
+    <div class="particles">
+
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+
+    </div>
+
+
+    <!-- CABEÇALHO -->
+
+    <header>
+
+        <h1>DECORAÇÃO</h1>
+
+        <p>THE OTHER SIDE</p>
+
+    </header>
+
+
+    <!-- MENU -->
+
+    <nav>
+
+        <a href="index.html">
+            ← Página principal
+        </a>
+
+        <a href="capitulos.html">
+            📖 Capítulos
+        </a>
+
+        <a href="videos.html">
+            🎬 Vídeos
+        </a>
+
+    </nav>
+
+
+    <!-- CONTEÚDO -->
+
+    <main>
+
+        <div class="intro">
+
+            <h2>🖼️ DECORAÇÃO</h2>
+
+            <p>
+                Imagens, referências, personagens,
+                cenários e elementos visuais de
+                THE OTHER SIDE.
+            </p>
+
+        </div>
+
+
+        <div class="galeria">
+
+
+            <div class="imagem-box">
+
+                <p>
+                    🖼️ Imagem de Edward
+                </p>
+
+            </div>
+
+
+            <div class="imagem-box">
+
+                <p>
+                    🖼️ Imagem de Summer
+                </p>
+
+            </div>
+
+
+            <div class="imagem-box">
+
+                <p>
+                    🖼️ Imagem de Theo
+                </p>
+
+            </div>
+
+
+            <div class="imagem-box">
+
+                <p>
+                    🖼️ Imagem de Katheryne
+                </p>
+
+            </div>
+
+
+            <div class="imagem-box">
+
+                <p>
+                    🖼️ Imagem de Madelena
+                </p>
+
+            </div>
+
+
+            <div class="imagem-box">
+
+                <p>
+                    🖼️ Imagem de Rosemary
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            THE OTHER SIDE © 2026
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

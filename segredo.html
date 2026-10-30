@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>THE OTHER SIDE — SECRET ARCHIVE</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    #190d25 0%,
+                    #08060c 45%,
+                    #020204 100%
+                );
+
+            color: #d8d0e6;
+
+            font-family:
+                "Cormorant Garamond",
+                Georgia,
+                serif;
+        }
+
+
+        /* =========================
+           CABEÇALHO
+        ========================= */
+
+        header {
+
+            text-align: center;
+
+            padding: 90px 20px 60px;
+
+            border-bottom:
+                1px solid #33203f;
+        }
+
+
+        header h1 {
+
+            margin: 0;
+
+            font-family: "Cinzel", serif;
+
+            font-size: 48px;
+
+            letter-spacing: 7px;
+
+            color: #c6a8ff;
+
+            text-shadow:
+                0 0 10px #8b5cf6,
+                0 0 30px #4c1d95;
+        }
+
+
+        header p {
+
+            margin-top: 20px;
+
+            color: #81778d;
+
+            font-size: 19px;
+
+            letter-spacing: 2px;
+        }
+
+
+        .restrito {
+
+            margin-top: 25px;
+
+            color: #5e5667;
+
+            font-size: 13px;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+        }
+
+
+        /* =========================
+           MENU INTERNO
+        ========================= */
+
+        .menu {
+
+            text-align: center;
+
+            padding: 20px;
+
+            border-bottom:
+                1px solid #21172d;
+
+            background:
+                rgba(5, 4, 8, 0.7);
+        }
+
+
+        .menu a {
+
+            display: inline-block;
+
+            margin: 5px;
+
+            padding: 9px 14px;
+
+            color: #9f91ad;
+
+            border:
+                1px solid #30203d;
+
+            border-radius: 6px;
+
+            text-decoration: none;
+
+            font-family: "Cinzel", serif;
+
+            font-size: 13px;
+
+            transition: 0.3s;
+        }
+
+
+        .menu a:hover {
+
+            color: white;
+
+            border-color: #8b5cf6;
+
+            box-shadow:
+                0 0 12px #4c1d95;
+        }
+
+
+        /* =========================
+           CONTEÚDO
+        ========================= */
+
+        main {
+
+            max-width: 1000px;
+
+            margin: auto;
+
+            padding: 60px 25px 100px;
+        }
+
+
+        section {
+
+            padding: 50px 0;
+
+            border-bottom:
+                1px solid #21172d;
+        }
+
+
+        h2 {
+
+            font-family: "Cinzel", serif;
+
+            color: #cdb5ff;
+
+            font-size: 32px;
+
+            letter-spacing: 2px;
+
+            text-shadow:
+                0 0 10px #6d28d9;
+        }
+
+
+        h3 {
+
+            font-family: "Cinzel", serif;
+
+            color: #b99aff;
+
+            font-size: 25px;
+        }
+
+
+        p {
+
+            font-size: 18px;
+
+            line-height: 1.8;
+
+            color: #cfc6dc;
+        }
+
+
+        /* =========================
+           ARQUIVOS
+        ========================= */
+
+        .arquivo {
+
+            background:
+                rgba(14, 9, 21, 0.9);
+
+            border:
+                1px solid #30203d;
+
+            border-left:
+                3px solid #6d28d9;
+
+            border-radius: 9px;
+
+            padding: 28px;
+
+            margin: 22px 0;
+        }
+
+
+        .arquivo strong {
+
+            color: #b99aff;
+        }
+
+
+        /* =========================
+           PERSONAGENS
+        ========================= */
+
+        .personagem {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(20, 11, 31, 0.95),
+                    rgba(8, 6, 12, 0.95)
+                );
+
+            border:
+                1px solid #30203d;
+
+            border-radius: 10px;
+
+            padding: 28px;
+
+            margin: 25px 0;
+
+            transition: 0.3s;
+        }
+
+
+        .personagem:hover {
+
+            border-color:
+                #7c3aed;
+
+            box-shadow:
+                0 0 20px
+                rgba(124, 58, 237, 0.15);
+        }
+
+
+        .codigo {
+
+            color: #62586d;
+
+            font-family:
+                monospace;
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+        }
+
+
+        /* =========================
+           ROTEIRO
+        ========================= */
+
+        .cena {
+
+            background:
+                rgba(8, 6, 12, 0.9);
+
+            border:
+                1px solid #2b1b36;
+
+            border-radius: 8px;
+
+            padding: 28px;
+
+            margin: 25px 0;
+        }
+
+
+        .cena-titulo {
+
+            color: #a78bfa;
+
+            font-family: "Cinzel", serif;
+
+            font-size: 22px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .acao {
+
+            color: #81778d;
+
+            font-style: italic;
+        }
+
+
+        .fala {
+
+            border-left:
+                2px solid #5b21b6;
+
+            padding-left: 18px;
+
+            margin: 18px 0;
+
+            color: #d8d0e6;
+        }
+
+
+        /* =========================
+           LOCAIS
+        ========================= */
+
+        .local {
+
+            padding: 25px;
+
+            margin: 20px 0;
+
+            background:
+                rgba(12, 8, 18, 0.85);
+
+            border:
+                1px solid #30203d;
+
+            border-radius: 8px;
+        }
+
+
+        .local h3 {
+
+            margin-top: 0;
+        }
+
+
+        /* =========================
+           SPOILERS
+        ========================= */
+
+        .spoiler {
+
+            background: #030305;
+
+            border:
+                1px solid #25182f;
+
+            color: #030305;
+
+            padding: 24px;
+
+            border-radius: 8px;
+
+            cursor: pointer;
+
+            transition: 0.4s;
+
+            margin: 20px 0;
+        }
+
+
+        .spoiler:hover {
+
+            color: #d8d0e6;
+
+            border-color:
+                #7c3aed;
+
+            box-shadow:
+                0 0 18px
+                rgba(124, 58, 237, 0.25);
+        }
+
+
+        /* =========================
+           BOTÃO
+        ========================= */
+
+        .botao {
+
+            display: inline-block;
+
+            margin-top: 30px;
+
+            padding: 13px 22px;
+
+            color: #eee7f7;
+
+            text-decoration: none;
+
+            font-family: "Cinzel", serif;
+
+            border:
+                1px solid #8b5cf6;
+
+            border-radius: 8px;
+
+            background: #120a1b;
+
+            transition: 0.3s;
+        }
+
+
+        .botao:hover {
+
+            background: #2b1242;
+
+            box-shadow:
+                0 0 18px #6d28d9;
+
+            color: white;
+        }
+
+
+        /* =========================
+           RODAPÉ
+        ========================= */
+
+        footer {
+
+            text-align: center;
+
+            padding: 40px;
+
+            border-top:
+                1px solid #21172d;
+
+            color: #62596d;
+        }
+
+
+        footer p {
+
+            color: #62596d;
+
+            font-size: 14px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <h1>THE SECRET SIDE</h1>
+
+    <p>
+        Arquivo secreto de THE OTHER SIDE
+    </p>
+
+    <div class="restrito">
+        ACCESS • RESTRICTED
+    </div>
+
+</header>
+
+
+<!-- =========================
+     MENU SECRETO
+========================= -->
+
+<div class="menu">
+
+    <a href="#historia">
+        HISTÓRIA
+    </a>
+
+    <a href="#personagens">
+        PERSONAGENS
+    </a>
+
+    <a href="#lugares">
+        LOCAIS
+    </a>
+
+    <a href="#roteiro">
+        ROTEIRO
+    </a>
+
+    <a href="#segredos">
+        SEGREDOS
+    </a>
+
+</div>
+
+
+<main>
+
+
+    <!-- =========================
+         HISTÓRIA
+    ========================= -->
+
+    <section id="historia">
+
+        <h2>01 — THE OTHER SIDE</h2>
+
+        <div class="arquivo">
+
+            <p>
+                <strong>Título:</strong>
+                THE OTHER SIDE
+            </p>
+
+            <p>
+                <strong>Criador:</strong>
+                Lohan
+            </p>
+
+            <p>
+                <strong>Universo:</strong>
+                THE OTHER SIDE
+            </p>
+
+            <p>
+                <strong>Estilo:</strong>
+                Mistério • Sobrenatural • Gótico • Fantasia •
+                Suspense
+            </p>
+
+            <p>
+                THE OTHER SIDE é apresentado como um universo
+                misterioso, cercado por acontecimentos estranhos,
+                personagens e lugares que escondem informações
+                que precisam ser descobertas.
+            </p>
+
+        </div>
+
+
+        <div class="arquivo">
+
+            <h3>O conceito visual</h3>
+
+            <p>
+                A identidade visual do universo utiliza uma
+                estética escura, cinematográfica e sobrenatural,
+                com predominância de preto, roxo, azul e rosa.
+            </p>
+
+            <p>
+                Elementos recorrentes incluem estrelas,
+                borboletas, cruzes, partículas, fotografias,
+                velas, rosas, florestas, casas durante a noite
+                e portais.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PERSONAGENS
+    ========================= -->
+
+    <section id="personagens">
+
+        <h2>02 — PERSONAGENS</h2>
+
+
+        <!-- EDWARD -->
+
+        <div class="personagem">
+
+            <div class="codigo">
+                FILE_001
+            </div>
+
+            <h3>Edward</h3>
+
+            <p>
+                Edward é um dos seis personagens apresentados
+                no universo visual de THE OTHER SIDE.
+            </p>
+
+            <p>
+                Sua representação visual utiliza cabelos
+                escuros e desalinhados, roupas escuras,
+                acessórios como brincos e uma estética
+                cinematográfica em tons de azul e roxo.
+            </p>
+
+            <p>
+                A imagem associada ao personagem apresenta
+                uma atmosfera urbana/noturna e sombria.
+            </p>
+
+        </div>
+
+
+        <!-- SUMMER -->
+
+        <div class="personagem">
+
+            <div class="codigo">
+                FILE_002
+            </div>
+
+            <h3>Summer</h3>
+
+            <p>
+                Summer é uma das personagens principais
+                apresentadas na identidade visual de
+                THE OTHER SIDE.
+            </p>
+
+            <p>
+                Sua representação utiliza cabelos muito claros,
+                acessórios de cabelo, elementos de borboletas
+                e iluminação rosa, roxa e azul.
+            </p>
+
+            <p>
+                Borboletas aparecem associadas à estética
+                visual da personagem.
+            </p>
+
+        </div>
+
+
+        <!-- THEO -->
+
+        <div class="personagem">
+
+            <div class="codigo">
+                FILE_003
+            </div>
+
+            <h3>Theo</h3>
+
+            <p>
+                Theo é um dos personagens centrais apresentados
+                visualmente.
+            </p>
+
+            <p>
+                Sua estética é marcada por cabelos escuros,
+                roupas escuras e iluminação azul/roxa.
+            </p>
+
+            <p>
+                A composição visual relacionada a Theo possui
+                elementos que lembram uma cerca ou ambiente
+                industrial/noturno.
+            </p>
+
+        </div>
+
+
+        <!-- KATHERYNE -->
+
+        <div class="personagem">
+
+            <div class="codigo">
+                FILE_004
+            </div>
+
+            <h3>Katheryne</h3>
+
+            <p>
+                Katheryne é uma das personagens apresentadas
+                no universo de THE OTHER SIDE.
+            </p>
+
+            <p>
+                Sua estética possui cabelos escuros, roupas
+                de aparência gótica, acessórios, fitas,
+                pequenos elementos em formato de cruz e
+                iluminação rosa e roxa.
+            </p>
+
+            <p>
+                A atmosfera visual da personagem é melancólica,
+                misteriosa e sobrenatural.
+            </p>
+
+        </div>
+
+
+        <!-- MADELENA -->
+
+        <div class="personagem">
+
+            <div class="codigo">
+                FILE_005
+            </div>
+
+            <h3>Madelena</h3>
+
+            <p>
+                Madelena é uma das seis personagens
+                representadas no material visual.
+            </p>
+
+            <p>
+                Sua identidade visual utiliza cabelos em tons
+                de vermelho/bordô e uma estética gótica.
+            </p>
+
+            <p>
+                A composição apresenta acessórios, maquiagem
+                escura e iluminação magenta/roxa.
+            </p>
+
+        </div>
+
+
+        <!-- ROSEMARY -->
+
+        <div class="personagem">
+
+            <div class="codigo">
+                FILE_006
+            </div>
+
+            <h3>Rosemary</h3>
+
+            <p>
+                Rosemary completa o grupo de seis personagens
+                apresentados no material visual.
+            </p>
+
+            <p>
+                Sua representação possui cabelos muito claros,
+                próximos do branco/prateado, acessórios
+                delicados e uma estética etérea e gótica.
+            </p>
+
+            <p>
+                A iluminação relacionada à personagem utiliza
+                principalmente tons frios de azul e roxo.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         LOCAIS
+    ========================= -->
+
+    <section id="lugares">
+
+        <h2>03 — LOCAIS E AMBIENTES</h2>
+
+
+        <div class="local">
+
+            <h3>🏠 BAIRRO</h3>
+
+            <p>
+                Um bairro durante a noite, apresentado com
+                casas, rua molhada, árvores, iluminação
+                noturna e uma atmosfera estranha.
+            </p>
+
+            <p>
+                O cenário possui aparência cinematográfica,
+                com tons de azul, roxo e rosa.
+            </p>
+
+        </div>
+
+
+        <div class="local">
+
+            <h3>🚪 O GUARDA-ROUPA</h3>
+
+            <p>
+                Um guarda-roupa ou passagem aparece como um
+                dos elementos misteriosos do universo visual.
+            </p>
+
+            <p>
+                A cena apresenta uma abertura iluminada por
+                uma luz roxa, criando a impressão de que existe
+                algo além dela.
+            </p>
+
+        </div>
+
+
+        <div class="local">
+
+            <h3>🌲 FLORESTA</h3>
+
+            <p>
+                Uma floresta escura durante a noite, com
+                árvores altas, neblina e iluminação da lua.
+            </p>
+
+            <p>
+                O ambiente possui uma atmosfera misteriosa
+                e sobrenatural.
+            </p>
+
+        </div>
+
+
+        <div class="local">
+
+            <h3>🌃 CIDADE</h3>
+
+            <p>
+                Uma cidade observada durante a noite,
+                próxima de uma área com água.
+            </p>
+
+            <p>
+                As luzes da cidade aparecem refletidas,
+                enquanto o céu apresenta tons roxos e rosas.
+            </p>
+
+        </div>
+
+
+        <div class="local">
+
+            <h3>🌀 OUTRO LADO</h3>
+
+            <p>
+                Um ambiente sobrenatural composto por
+                formações flutuantes, ilhas ou estruturas
+                suspensas e uma atmosfera diferente da
+                realidade comum.
+            </p>
+
+            <p>
+                É apresentado visualmente como um lugar
+                fantástico e misterioso.
+            </p>
+
+        </div>
+
+
+        <div class="local">
+
+            <h3>📸 REFERÊNCIAS</h3>
+
+            <p>
+                Fotografias, Polaroids, anotações,
+                borboletas, correntes, objetos, velas,
+                flores e elementos relacionados ao mistério
+                fazem parte da identidade visual.
+            </p>
+
+            <p>
+                Uma anotação com o nome
+                <strong>THE OTHER SIDE</strong>
+                aparece entre os objetos.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ROTEIRO
+    ========================= -->
+
+    <section id="roteiro">
+
+        <h2>04 — ROTEIRO / CENAS</h2>
+
+        <div class="arquivo">
+
+            <p>
+                ⚠️ O arquivo de roteiro completo não foi
+                localizado entre os documentos recuperados.
+            </p>
+
+            <p>
+                Esta área fica reservada para as cenas,
+                diálogos e acontecimentos oficiais.
+            </p>
+
+            <p>
+                Não foram inventados diálogos para evitar
+                transformar uma criação nova em informação
+                oficial da história.
+            </p>
+
+        </div>
+
+
+        <div class="cena">
+
+            <div class="cena-titulo">
+                CENA — O BAIRRO
+            </div>
+
+            <p class="acao">
+                Ambiente noturno. Casas, rua molhada,
+                árvores e iluminação sombria.
+            </p>
+
+            <p>
+                O cenário estabelece a atmosfera de
+                THE OTHER SIDE.
+            </p>
+
+        </div>
+
+
+        <div class="cena">
+
+            <div class="cena-titulo">
+                CENA — O GUARDA-ROUPA
+            </div>
+
+            <p class="acao">
+                Um guarda-roupa aparece em um ambiente
+                escuro. Uma luz roxa pode ser percebida
+                além da passagem.
+            </p>
+
+            <p>
+                O guarda-roupa é tratado como um dos
+                principais elementos misteriosos da estética.
+            </p>
+
+        </div>
+
+
+        <div class="cena">
+
+            <div class="cena-titulo">
+                CENA — A FLORESTA
+            </div>
+
+            <p class="acao">
+                A floresta aparece durante a noite,
+                coberta por neblina e iluminada pela lua.
+            </p>
+
+        </div>
+
+
+        <div class="cena">
+
+            <div class="cena-titulo">
+                CENA — O OUTRO LADO
+            </div>
+
+            <p class="acao">
+                Um ambiente diferente da realidade comum
+                é apresentado.
+            </p>
+
+            <p>
+                A composição visual utiliza elementos
+                sobrenaturais e fantásticos.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ELEMENTOS VISUAIS
+    ========================= -->
+
+    <section>
+
+        <h2>05 — ELEMENTOS RECORRENTES</h2>
+
+
+        <div class="arquivo">
+
+            <p>✦ Estrelas</p>
+
+            <p>🦋 Borboletas</p>
+
+            <p>✝ Elementos de cruz</p>
+
+            <p>🕯️ Velas</p>
+
+            <p>🌹 Rosas e flores</p>
+
+            <p>📸 Fotografias / Polaroids</p>
+
+            <p>🔗 Correntes e joias</p>
+
+            <p>🚪 Portas e passagens</p>
+
+            <p>🌀 Portais</p>
+
+            <p>🌲 Florestas</p>
+
+            <p>🌙 Lua / noite</p>
+
+            <p>🌫️ Neblina</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SEGREDOS
+    ========================= -->
+
+    <section id="segredos">
+
+        <h2>06 — ARQUIVOS SECRETOS</h2>
+
+
+        <div class="spoiler">
+
+            ARQUIVO 001
+
+            <br><br>
+
+            Algumas informações da história ainda estão
+            ocultas.
+
+        </div>
+
+
+        <div class="spoiler">
+
+            ARQUIVO 002
+
+            <br><br>
+
+            O roteiro completo deverá ser adicionado
+            quando o documento original for localizado.
+
+        </div>
+
+
+        <div class="spoiler">
+
+            ARQUIVO 003
+
+            <br><br>
+
+            Nem tudo que existe em THE OTHER SIDE
+            está registrado neste arquivo.
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         STATUS
+    ========================= -->
+
+    <section>
+
+        <h2>07 — STATUS DO ARQUIVO</h2>
+
+        <div class="arquivo">
+
+            <p>
+                <strong>PERSONAGENS:</strong>
+                REGISTRADOS
+            </p>
+
+            <p>
+                <strong>AMBIENTES:</strong>
+                REGISTRADOS
+            </p>
+
+            <p>
+                <strong>IDENTIDADE VISUAL:</strong>
+                REGISTRADA
+            </p>
+
+            <p>
+                <strong>ROTEIRO COMPLETO:</strong>
+                NÃO LOCALIZADO
+            </p>
+
+            <p>
+                <strong>DIÁLOGOS:</strong>
+                NÃO LOCALIZADOS
+            </p>
+
+            <p>
+                <strong>SEGREDOS:</strong>
+                RESTRITOS
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <a class="botao" href="index.html">
+        ← VOLTAR PARA THE OTHER SIDE
+    </a>
+
+
+</main>
+
+
+<footer>
+
+    <p>
+        THE OTHER SIDE — SECRET ARCHIVE © 2026
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>

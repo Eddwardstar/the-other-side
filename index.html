@@ -1,0 +1,817 @@
+ <!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>THE OTHER SIDE</title>
+
+    <!-- FONTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            margin: 0;
+
+            background: #050509;
+
+            color: #d8d0e6;
+
+            font-family:
+                "Cormorant Garamond",
+                Georgia,
+                serif;
+        }
+
+
+        /* =========================
+           PARTÍCULAS
+        ========================= */
+
+        .particles {
+
+            position: fixed;
+
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            pointer-events: none;
+
+            overflow: hidden;
+
+            z-index: 0;
+        }
+
+
+        .particle {
+
+            position: absolute;
+
+            bottom: -10px;
+
+            width: 4px;
+            height: 4px;
+
+            background: white;
+
+            border-radius: 50%;
+
+            box-shadow:
+                0 0 10px white;
+
+            opacity: 0;
+
+            animation:
+                subir 8s linear infinite;
+        }
+
+
+        .particle:nth-child(1) {
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .particle:nth-child(2) {
+            left: 15%;
+            animation-delay: 2s;
+        }
+
+        .particle:nth-child(3) {
+            left: 30%;
+            animation-delay: 4s;
+        }
+
+        .particle:nth-child(4) {
+            left: 45%;
+            animation-delay: 1s;
+        }
+
+        .particle:nth-child(5) {
+            left: 60%;
+            animation-delay: 3s;
+        }
+
+        .particle:nth-child(6) {
+            left: 75%;
+            animation-delay: 5s;
+        }
+
+        .particle:nth-child(7) {
+            left: 90%;
+            animation-delay: 2.5s;
+        }
+
+
+        @keyframes subir {
+
+            0% {
+                transform: translateY(0);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0.8;
+            }
+
+            80% {
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translateY(-110vh);
+                opacity: 0;
+            }
+
+        }
+
+
+        /* =========================
+           FONTES DOS TÍTULOS
+        ========================= */
+
+        header h1,
+        h2,
+        h3,
+        nav a,
+        .botao,
+        .segredo {
+
+            font-family: "Cinzel", serif;
+        }
+
+
+        /* =========================
+           CABEÇALHO
+        ========================= */
+
+        header {
+
+            position: relative;
+
+            z-index: 1;
+
+            text-align: center;
+
+            padding: 90px 20px;
+
+            background:
+                radial-gradient(
+                    circle,
+                    #24113d 0%,
+                    #100b1d 40%,
+                    #050509 75%
+                );
+
+            border-bottom:
+                1px solid #3d2161;
+        }
+
+
+        header h1 {
+
+            margin: 0;
+
+            font-size: 52px;
+
+            font-weight: 600;
+
+            color: #d9c2ff;
+
+            text-shadow:
+                0 0 10px #8b5cf6,
+                0 0 30px #5b21b6;
+
+            letter-spacing: 5px;
+        }
+
+
+        header p {
+
+            margin-top: 18px;
+
+            color: #aaa1b8;
+
+            letter-spacing: 2px;
+
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           MENU
+        ========================= */
+
+        nav {
+
+            position: relative;
+
+            z-index: 2;
+
+            text-align: center;
+
+            padding: 20px;
+
+            background: #09090f;
+
+            border-bottom:
+                1px solid #21172d;
+        }
+
+
+        nav a {
+
+            color: #d8d0e6;
+
+            text-decoration: none;
+
+            margin: 5px;
+
+            padding: 11px 17px;
+
+            display: inline-block;
+
+            border:
+                1px solid #35264b;
+
+            border-radius: 8px;
+
+            transition: 0.3s;
+
+            font-size: 15px;
+        }
+
+
+        nav a:hover {
+
+            background: #27133d;
+
+            border-color: #9b6cff;
+
+            color: white;
+
+            box-shadow:
+                0 0 15px #5b21b6;
+        }
+
+
+        /* =========================
+           CONTEÚDO
+        ========================= */
+
+        main {
+
+            position: relative;
+
+            z-index: 1;
+
+            max-width: 900px;
+
+            margin: auto;
+
+            padding: 60px 25px;
+        }
+
+
+        section {
+
+            padding: 50px 0;
+
+            border-bottom:
+                1px solid #241a31;
+        }
+
+
+        h2 {
+
+            color: #cdb5ff;
+
+            font-size: 38px;
+
+            font-weight: 600;
+
+            text-shadow:
+                0 0 8px #7c3aed,
+                0 0 20px #4c1d95;
+        }
+
+
+        h3 {
+
+            color: #c5a6ff;
+
+            font-size: 27px;
+
+            font-weight: 600;
+
+            text-shadow:
+                0 0 8px #6d28d9;
+        }
+
+
+        p {
+
+            color: #cfc6dc;
+
+            line-height: 1.8;
+
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           PERSONAGENS
+        ========================= */
+
+        .personagem {
+
+            background:
+                rgba(18, 10, 28, 0.85);
+
+            border:
+                1px solid #352047;
+
+            border-left:
+                3px solid #8b5cf6;
+
+            border-radius: 10px;
+
+            padding: 25px;
+
+            margin: 20px 0;
+
+            transition: 0.3s;
+        }
+
+
+        .personagem:hover {
+
+            transform:
+                translateY(-3px);
+
+            border-color:
+                #8b5cf6;
+
+            box-shadow:
+                0 0 20px
+                rgba(139, 92, 246, 0.2);
+        }
+
+
+        .personagem h3 {
+
+            margin-top: 0;
+        }
+
+
+        .historia {
+
+            color: #aaa1b8;
+
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           BOTÕES
+        ========================= */
+
+        .botao {
+
+            display: inline-block;
+
+            margin-top: 20px;
+
+            padding: 13px 20px;
+
+            color: #eee7f7;
+
+            text-decoration: none;
+
+            border:
+                1px solid #8b5cf6;
+
+            border-radius: 8px;
+
+            background: #170d25;
+
+            transition: 0.3s;
+        }
+
+
+        .botao:hover {
+
+            background: #321252;
+
+            box-shadow:
+                0 0 18px #6d28d9;
+
+            color: white;
+        }
+
+
+        /* =========================
+           VÍDEOS / DECORAÇÃO
+        ========================= */
+
+        .bloco {
+
+            background:
+                rgba(12, 8, 18, 0.7);
+
+            border:
+                1px solid #2c1c3c;
+
+            border-radius: 10px;
+
+            padding: 25px;
+
+            margin-top: 20px;
+        }
+
+
+        /* =========================
+           BOTÃO SECRETO
+        ========================= */
+
+        .segredo {
+
+            position: fixed;
+
+            bottom: 18px;
+
+            right: 18px;
+
+            width: 25px;
+
+            height: 25px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: #16111d;
+
+            text-decoration: none;
+
+            font-size: 18px;
+
+            opacity: 0.25;
+
+            transition: 0.4s;
+
+            z-index: 10;
+        }
+
+
+        .segredo:hover {
+
+            color: #b99aff;
+
+            opacity: 1;
+
+            text-shadow:
+                0 0 8px #8b5cf6,
+                0 0 20px #6d28d9;
+
+            transform:
+                rotate(180deg)
+                scale(1.2);
+        }
+
+
+        /* =========================
+           RODAPÉ
+        ========================= */
+
+        footer {
+
+            position: relative;
+
+            z-index: 1;
+
+            text-align: center;
+
+            padding: 40px;
+
+            color: #70677c;
+
+            border-top:
+                1px solid #21172d;
+        }
+
+
+        footer p {
+
+            color: #70677c;
+
+            font-size: 15px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         PARTÍCULAS
+    ========================= -->
+
+    <div class="particles">
+
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+
+    </div>
+
+
+    <!-- =========================
+         CABEÇALHO
+    ========================= -->
+
+    <header>
+
+        <h1>THE OTHER SIDE</h1>
+
+        <p>
+            Uma história criada por Lohan.
+        </p>
+
+    </header>
+
+
+    <!-- =========================
+         MENU
+    ========================= -->
+
+    <nav>
+
+        <a href="#the-other-side">
+            THE OTHER SIDE
+        </a>
+
+        <a href="#historia">
+            A HISTÓRIA
+        </a>
+
+        <a href="videos.html">
+            🎥 VÍDEOS
+        </a>
+
+        <a href="decoracao.html">
+            🖼️ DECORAÇÃO
+        </a>
+
+        <a href="capitulos.html">
+            📖 CAPÍTULOS
+        </a>
+
+    </nav>
+
+
+    <!-- =========================
+         CONTEÚDO
+    ========================= -->
+
+    <main>
+
+
+        <!-- THE OTHER SIDE -->
+
+        <section id="the-other-side">
+
+            <h2>THE OTHER SIDE</h2>
+
+            <p>
+                Bem-vindo ao outro lado.
+            </p>
+
+            <p>
+                Um lugar onde nada é exatamente como parece.
+            </p>
+
+            <p>
+                Existem segredos, acontecimentos estranhos,
+                personagens e mistérios esperando para serem descobertos.
+            </p>
+
+        </section>
+
+
+        <!-- HISTÓRIA -->
+
+        <section id="historia">
+
+            <h2>A HISTÓRIA DOS PERSONAGENS</h2>
+
+
+            <!-- EDWARD -->
+
+            <div class="personagem">
+
+                <h3>Edward</h3>
+
+                <p>
+                    📖 <strong>História</strong>
+                </p>
+
+                <p class="historia">
+                    A história de Edward será colocada aqui.
+                </p>
+
+            </div>
+
+
+            <!-- SUMMER -->
+
+            <div class="personagem">
+
+                <h3>Summer</h3>
+
+                <p>
+                    📖 <strong>História</strong>
+                </p>
+
+                <p class="historia">
+                    A história de Summer será colocada aqui.
+                </p>
+
+            </div>
+
+
+            <!-- THEO -->
+
+            <div class="personagem">
+
+                <h3>Theo</h3>
+
+                <p>
+                    📖 <strong>História</strong>
+                </p>
+
+                <p class="historia">
+                    A história de Theo será colocada aqui.
+                </p>
+
+            </div>
+
+
+            <!-- KATHERYNE -->
+
+            <div class="personagem">
+
+                <h3>Katheryne</h3>
+
+                <p>
+                    📖 <strong>História</strong>
+                </p>
+
+                <p class="historia">
+                    A história de Katheryne será colocada aqui.
+                </p>
+
+            </div>
+
+
+            <!-- MADELENA -->
+
+            <div class="personagem">
+
+                <h3>Madelena</h3>
+
+                <p>
+                    📖 <strong>História</strong>
+                </p>
+
+                <p class="historia">
+                    A história de Madelena será colocada aqui.
+                </p>
+
+            </div>
+
+
+            <!-- ROSEMARY -->
+
+            <div class="personagem">
+
+                <h3>Rosemary</h3>
+
+                <p>
+                    📖 <strong>História</strong>
+                </p>
+
+                <p class="historia">
+                    A história de Rosemary será colocada aqui.
+                </p>
+
+            </div>
+
+
+            <!-- CAPÍTULOS -->
+
+            <a class="botao" href="capitulos.html">
+                📖 ENTRAR NOS CAPÍTULOS
+            </a>
+
+        </section>
+
+
+        <!-- VÍDEOS -->
+
+        <section id="videos">
+
+            <h2>VÍDEOS</h2>
+
+            <div class="bloco">
+
+                <p>
+                    Os vídeos de THE OTHER SIDE aparecerão aqui.
+                </p>
+
+                <a class="botao" href="videos.html">
+                    🎥 IR PARA OS VÍDEOS
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- DECORAÇÃO -->
+
+        <section id="decoracao">
+
+            <h2>DECORAÇÃO</h2>
+
+            <div class="bloco">
+
+                <p>
+                    Imagens, referências e elementos visuais
+                    de THE OTHER SIDE.
+                </p>
+
+                <a class="botao" href="decoracao.html">
+                    🖼️ IR PARA A DECORAÇÃO
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================
+         RODAPÉ
+    ========================= -->
+
+    <footer>
+
+        <p>
+            THE OTHER SIDE © 2026
+        </p>
+
+    </footer>
+
+
+    <!-- =========================
+         BOTÃO SECRETO
+    ========================= -->
+
+    <a
+        href="segredo.html"
+        class="segredo"
+        title="..."
+    >
+        ✦
+    </a>
+
+
+</body>
+
+</html>
