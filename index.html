@@ -4,23 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- ÍCONE DO THE OTHER SIDE -->
+    <!-- Google Search Console -->
+    <meta name="google-site-verification" content="vHDo7_Zpk9ifI_lrrc6GORMX4KcL3M2gu5DGzrlHpJg" />
+
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="simbolo.png">
 
-    <title>THE OTHER SIDE</title>
+    <!-- Informações para buscadores -->
+    <meta name="description" content="THE OTHER SIDE — Uma história misteriosa criada por Lohan, com personagens, segredos e acontecimentos sobrenaturais.">
 
-    <!-- FONTES -->
+    <meta name="theme-color" content="#08050d">
+
+    <title>THE OTHER SIDE — Uma história misteriosa</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
 
         html {
@@ -29,81 +35,136 @@
 
         body {
             background:
-                radial-gradient(circle at 50% 20%, rgba(91, 45, 130, 0.18), transparent 35%),
-                linear-gradient(180deg, #050308, #09050e 50%, #040207);
-            color: #d8cde2;
-            font-family: 'Cormorant Garamond', serif;
+                radial-gradient(circle at 50% 20%, #211034 0%, #0d0714 35%, #030303 80%);
+            color: #eee;
+            font-family: "Cormorant Garamond", serif;
             min-height: 100vh;
             overflow-x: hidden;
         }
-
-        /* PARTÍCULAS */
 
         body::before {
             content: "";
             position: fixed;
             inset: 0;
             pointer-events: none;
-            background-image:
-                radial-gradient(circle, rgba(255,255,255,0.7) 1px, transparent 1px),
-                radial-gradient(circle, rgba(190,150,255,0.5) 1px, transparent 1px);
-            background-size: 120px 120px, 180px 180px;
-            background-position: 20px 30px, 80px 100px;
-            opacity: 0.18;
-            animation: stars 18s linear infinite;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(139, 92, 246, 0.08), transparent 25%),
+                radial-gradient(circle at 80% 70%, rgba(168, 85, 247, 0.07), transparent 25%);
             z-index: -1;
         }
 
-        @keyframes stars {
-            from {
+        /* PARTÍCULAS */
+
+        .particulas {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .particulas span {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #fff;
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: flutuar 8s infinite ease-in-out;
+        }
+
+        .particulas span:nth-child(1) { left: 8%; top: 20%; animation-delay: 0s; }
+        .particulas span:nth-child(2) { left: 17%; top: 70%; animation-delay: 2s; }
+        .particulas span:nth-child(3) { left: 30%; top: 35%; animation-delay: 4s; }
+        .particulas span:nth-child(4) { left: 45%; top: 80%; animation-delay: 1s; }
+        .particulas span:nth-child(5) { left: 58%; top: 25%; animation-delay: 3s; }
+        .particulas span:nth-child(6) { left: 70%; top: 60%; animation-delay: 5s; }
+        .particulas span:nth-child(7) { left: 83%; top: 30%; animation-delay: 2s; }
+        .particulas span:nth-child(8) { left: 92%; top: 75%; animation-delay: 4s; }
+
+        @keyframes flutuar {
+            0%, 100% {
                 transform: translateY(0);
+                opacity: 0.2;
             }
 
-            to {
-                transform: translateY(-120px);
+            50% {
+                transform: translateY(-25px);
+                opacity: 0.8;
             }
         }
 
-        /* CABEÇALHO */
+        /* NAVEGAÇÃO */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 18px;
+            background: rgba(3, 3, 3, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        nav a {
+            color: #cbb8e9;
+            text-decoration: none;
+            font-family: "Cinzel", serif;
+            font-size: 12px;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #fff;
+            text-shadow:
+                0 0 8px #8b5cf6,
+                0 0 18px #6d28d9;
+        }
+
+        /* HERO */
 
         header {
-            min-height: 90vh;
+            min-height: 85vh;
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             text-align: center;
-            padding: 60px 20px;
             position: relative;
+            padding: 80px 20px;
         }
 
-        header::after {
-            content: "";
+        .glow {
             position: absolute;
-            width: 500px;
-            height: 500px;
-            background: rgba(112, 58, 170, 0.08);
-            filter: blur(100px);
+            width: 350px;
+            height: 350px;
+            background: rgba(124, 58, 237, 0.15);
+            filter: blur(90px);
             border-radius: 50%;
             z-index: -1;
         }
 
-        .titulo {
-            font-family: 'Cinzel', serif;
-            font-size: clamp(42px, 8vw, 92px);
-            letter-spacing: 12px;
-            color: #eee5f5;
+        h1 {
+            font-family: "Cinzel", serif;
+            font-size: clamp(48px, 10vw, 110px);
+            letter-spacing: 10px;
+            color: #f4efff;
             text-shadow:
-                0 0 10px rgba(180, 130, 255, 0.25),
-                0 0 35px rgba(110, 50, 180, 0.3);
+                0 0 10px rgba(139, 92, 246, 0.7),
+                0 0 35px rgba(109, 40, 217, 0.6),
+                0 0 80px rgba(76, 29, 149, 0.4);
             animation: aparecer 2s ease;
         }
 
         .subtitulo {
-            margin-top: 18px;
+            margin-top: 20px;
+            color: #a99bb9;
             font-size: 20px;
             letter-spacing: 3px;
-            color: #a99bb5;
             animation: aparecer 3s ease;
         }
 
@@ -119,202 +180,109 @@
             }
         }
 
-        /* MENU */
+        /* CONTEÚDO */
 
-        nav {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 28px;
-            margin-top: 45px;
-        }
-
-        nav a {
-            color: #b9a9c5;
-            text-decoration: none;
-            font-family: 'Cinzel', serif;
-            font-size: 13px;
-            letter-spacing: 2px;
-            transition: 0.3s;
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 25px 120px;
             position: relative;
+            z-index: 1;
         }
-
-        nav a::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -7px;
-            width: 0;
-            height: 1px;
-            background: #a875ff;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: #d7baff;
-            text-shadow: 0 0 12px rgba(150, 90, 255, 0.6);
-        }
-
-        nav a:hover::after {
-            width: 100%;
-        }
-
-        /* SEÇÕES */
 
         section {
-            width: min(1100px, 90%);
-            margin: 0 auto;
-            padding: 100px 0;
+            margin-bottom: 100px;
         }
 
         .titulo-secao {
-            font-family: 'Cinzel', serif;
+            font-family: "Cinzel", serif;
             text-align: center;
-            color: #c7a8ec;
-            font-size: 28px;
+            font-size: 32px;
             letter-spacing: 5px;
-            margin-bottom: 50px;
-        }
-
-        .titulo-secao::before,
-        .titulo-secao::after {
-            content: " ✦ ";
-            color: #7045a8;
-        }
-
-        /* HISTÓRIA */
-
-        .historia {
-            text-align: center;
-            max-width: 800px;
-            margin: auto;
-        }
-
-        .historia p {
-            font-size: 20px;
-            line-height: 1.8;
-            color: #bdb1c8;
+            margin-bottom: 45px;
+            color: #ddd0f3;
+            text-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
         }
 
         /* PERSONAGENS */
 
         .personagens {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 25px;
         }
 
         .personagem {
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(42, 25, 55, 0.75),
-                    rgba(10, 7, 14, 0.9)
-                );
-            border: 1px solid rgba(150, 100, 190, 0.18);
-            padding: 35px 25px;
-            min-height: 240px;
-            text-align: center;
-            transition: 0.5s;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .personagem::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(
-                circle at center,
-                rgba(140, 80, 210, 0.12),
-                transparent 65%
+            background: linear-gradient(
+                145deg,
+                rgba(31, 19, 45, 0.85),
+                rgba(8, 5, 12, 0.95)
             );
-            opacity: 0;
-            transition: 0.5s;
+            border: 1px solid rgba(139, 92, 246, 0.25);
+            padding: 30px;
+            min-height: 190px;
+            transition: 0.4s;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
         }
 
         .personagem:hover {
-            transform: translateY(-8px);
-            border-color: rgba(180, 130, 255, 0.45);
+            transform: translateY(-7px);
+            border-color: rgba(168, 85, 247, 0.7);
             box-shadow:
-                0 0 25px rgba(100, 50, 160, 0.18);
-        }
-
-        .personagem:hover::before {
-            opacity: 1;
+                0 0 20px rgba(124, 58, 237, 0.25),
+                0 0 50px rgba(76, 29, 149, 0.15);
         }
 
         .personagem h3 {
-            font-family: 'Cinzel', serif;
-            color: #d3b7f0;
-            font-size: 20px;
-            letter-spacing: 3px;
-            margin-bottom: 18px;
-            position: relative;
+            font-family: "Cinzel", serif;
+            color: #c7a9f5;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
         }
 
         .personagem p {
-            color: #a99eaf;
-            line-height: 1.7;
-            font-size: 17px;
-            position: relative;
+            color: #a99fb2;
+            font-size: 18px;
+            line-height: 1.5;
         }
 
-        /* LINKS */
+        /* BOTÕES */
 
-        .links {
+        .botoes {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 50px;
+            gap: 15px;
         }
 
         .botao {
             display: inline-block;
-            padding: 14px 28px;
-            border: 1px solid rgba(170, 120, 220, 0.35);
-            color: #c9b5d8;
+            padding: 14px 25px;
+            border: 1px solid rgba(168, 85, 247, 0.5);
+            color: #d9c8ef;
             text-decoration: none;
-            font-family: 'Cinzel', serif;
-            font-size: 12px;
+            font-family: "Cinzel", serif;
             letter-spacing: 2px;
-            transition: 0.4s;
-            background: rgba(20, 12, 28, 0.5);
+            transition: 0.3s;
+            background: rgba(20, 10, 30, 0.5);
         }
 
         .botao:hover {
-            color: #eee5f5;
-            border-color: #9d6ee0;
-            background: rgba(80, 40, 120, 0.2);
-            box-shadow:
-                0 0 18px rgba(130, 70, 190, 0.3);
-            transform: translateY(-3px);
+            background: rgba(124, 58, 237, 0.2);
+            border-color: #a855f7;
+            color: white;
+            box-shadow: 0 0 25px rgba(139, 92, 246, 0.35);
         }
 
-        /* SEPARADOR */
-
-        .separador {
-            width: 100%;
-            height: 1px;
-            background: linear-gradient(
-                90deg,
-                transparent,
-                rgba(150, 100, 200, 0.3),
-                transparent
-            );
-        }
-
-        /* RODAPÉ */
+        /* FOOTER */
 
         footer {
             text-align: center;
-            padding: 60px 20px 80px;
-            color: #6f6478;
-            font-family: 'Cinzel', serif;
-            font-size: 11px;
-            letter-spacing: 3px;
+            padding: 30px;
+            border-top: 1px solid rgba(139, 92, 246, 0.15);
+            color: #665b70;
+            font-size: 14px;
+            letter-spacing: 2px;
         }
 
         /* BOTÃO SECRETO */
@@ -345,244 +313,157 @@
             transform: rotate(180deg) scale(1.2);
         }
 
-        /* CELULAR */
+        @media (max-width: 700px) {
+            nav {
+                gap: 12px;
+                flex-wrap: wrap;
+            }
 
-        @media (max-width: 600px) {
+            nav a {
+                font-size: 10px;
+            }
 
-            .titulo {
-                letter-spacing: 6px;
+            header {
+                min-height: 75vh;
             }
 
             .subtitulo {
                 font-size: 16px;
-                letter-spacing: 2px;
-            }
-
-            nav {
-                gap: 18px;
-            }
-
-            nav a {
-                font-size: 11px;
-            }
-
-            section {
-                padding: 70px 0;
-            }
-
-            .titulo-secao {
-                font-size: 22px;
-            }
-
-            .historia p {
-                font-size: 18px;
             }
         }
-
     </style>
 </head>
 
 <body>
 
-    <!-- CABEÇALHO -->
+    <div class="particulas">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav>
+        <a href="index.html">THE OTHER SIDE</a>
+        <a href="#historia">A HISTÓRIA</a>
+        <a href="videos.html">VÍDEOS</a>
+        <a href="decoracao.html">DECORAÇÃO</a>
+        <a href="capitulos.html">CAPÍTULOS</a>
+    </nav>
 
     <header>
+        <div class="glow"></div>
 
-        <h1 class="titulo">
-            THE OTHER SIDE
-        </h1>
+        <h1>THE OTHER SIDE</h1>
 
         <p class="subtitulo">
             Uma história criada por Lohan.
         </p>
-
-        <nav>
-            <a href="index.html">THE OTHER SIDE</a>
-            <a href="#historia">A HISTÓRIA</a>
-            <a href="videos.html">VÍDEOS</a>
-            <a href="decoracao.html">DECORAÇÃO</a>
-            <a href="capitulos.html">CAPÍTULOS</a>
-        </nav>
-
     </header>
 
+    <main>
 
-    <div class="separador"></div>
+        <section id="historia">
+            <h2 class="titulo-secao">A HISTÓRIA</h2>
 
-
-    <!-- HISTÓRIA -->
-
-    <section id="historia">
-
-        <h2 class="titulo-secao">
-            A HISTÓRIA
-        </h2>
-
-        <div class="historia">
-
-            <p>
-                THE OTHER SIDE é um universo de mistério,
-                fantasia, suspense e acontecimentos sobrenaturais.
+            <p style="
+                text-align:center;
+                max-width:800px;
+                margin:auto;
+                color:#aaa0b0;
+                font-size:20px;
+                line-height:1.7;
+            ">
+                Existe um outro lado.
+                Um lugar onde as coisas não são exatamente como parecem,
+                onde segredos permanecem escondidos e onde atravessar uma porta
+                pode mudar tudo.
             </p>
+        </section>
 
-            <br>
+        <section>
+            <h2 class="titulo-secao">PERSONAGENS</h2>
 
-            <p>
-                Por trás de lugares aparentemente comuns existem
-                passagens, segredos e acontecimentos que conectam
-                diferentes lados da realidade.
-            </p>
+            <div class="personagens">
 
-            <br>
+                <div class="personagem">
+                    <h3>Edward</h3>
+                    <p>
+                        Um dos personagens centrais de THE OTHER SIDE.
+                        Sua história está ligada aos acontecimentos do outro lado.
+                    </p>
+                </div>
 
-            <p>
-                Nem tudo é o que parece.
-            </p>
+                <div class="personagem">
+                    <h3>Summer</h3>
+                    <p>
+                        Uma personagem envolvida nos mistérios e acontecimentos
+                        que cercam esse mundo.
+                    </p>
+                </div>
 
-        </div>
+                <div class="personagem">
+                    <h3>Theo</h3>
+                    <p>
+                        Entre segredos, descobertas e perigos,
+                        Theo começa a perceber que existe algo muito maior acontecendo.
+                    </p>
+                </div>
 
-    </section>
+                <div class="personagem">
+                    <h3>Katheryne</h3>
+                    <p>
+                        Uma presença importante na história,
+                        cercada por mistérios que ainda precisam ser descobertos.
+                    </p>
+                </div>
 
+                <div class="personagem">
+                    <h3>Madelena</h3>
+                    <p>
+                        Uma personagem ligada aos acontecimentos
+                        que se escondem por trás de THE OTHER SIDE.
+                    </p>
+                </div>
 
-    <div class="separador"></div>
-
-
-    <!-- PERSONAGENS -->
-
-    <section>
-
-        <h2 class="titulo-secao">
-            PERSONAGENS
-        </h2>
-
-        <div class="personagens">
-
-            <div class="personagem">
-
-                <h3>Edward</h3>
-
-                <p>
-                    Um dos personagens centrais de THE OTHER SIDE.
-                    Cercado por mistérios, acontecimentos estranhos
-                    e uma realidade que parece esconder muito mais
-                    do que mostra.
-                </p>
-
-            </div>
-
-
-            <div class="personagem">
-
-                <h3>Summer</h3>
-
-                <p>
-                    Uma personagem ligada à atmosfera misteriosa
-                    e sobrenatural da história, carregando sua
-                    própria presença e seus próprios segredos.
-                </p>
+                <div class="personagem">
+                    <h3>Rosemary</h3>
+                    <p>
+                        Uma figura misteriosa cuja participação
+                        pode revelar novas partes da história.
+                    </p>
+                </div>
 
             </div>
+        </section>
 
+        <section>
+            <h2 class="titulo-secao">EXPLORE</h2>
 
-            <div class="personagem">
+            <div class="botoes">
+                <a class="botao" href="capitulos.html">
+                    CAPÍTULOS
+                </a>
 
-                <h3>Theo</h3>
+                <a class="botao" href="videos.html">
+                    VÍDEOS
+                </a>
 
-                <p>
-                    Um personagem envolvido nos acontecimentos
-                    do Outro Lado, conectado aos mistérios que
-                    surgem durante a história.
-                </p>
-
+                <a class="botao" href="decoracao.html">
+                    DECORAÇÃO
+                </a>
             </div>
+        </section>
 
-
-            <div class="personagem">
-
-                <h3>Katheryne</h3>
-
-                <p>
-                    Uma personagem de presença gótica e misteriosa,
-                    cercada por símbolos, segredos e elementos
-                    sobrenaturais.
-                </p>
-
-            </div>
-
-
-            <div class="personagem">
-
-                <h3>Madelena</h3>
-
-                <p>
-                    Uma presença marcante dentro do universo de
-                    THE OTHER SIDE, ligada à estética sombria
-                    e aos mistérios da história.
-                </p>
-
-            </div>
-
-
-            <div class="personagem">
-
-                <h3>Rosemary</h3>
-
-                <p>
-                    Uma personagem de aparência delicada e
-                    misteriosa, associada à atmosfera sobrenatural
-                    e fantástica do universo.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <div class="separador"></div>
-
-
-    <!-- LINKS -->
-
-    <section>
-
-        <h2 class="titulo-secao">
-            EXPLORE
-        </h2>
-
-        <div class="links">
-
-            <a href="capitulos.html" class="botao">
-                CAPÍTULOS
-            </a>
-
-            <a href="videos.html" class="botao">
-                VÍDEOS
-            </a>
-
-            <a href="decoracao.html" class="botao">
-                DECORAÇÃO
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <div class="separador"></div>
-
-
-    <!-- RODAPÉ -->
+    </main>
 
     <footer>
-
         THE OTHER SIDE © 2026
-
     </footer>
-
-
-    <!-- PÁGINA SECRETA -->
 
     <a
         href="segredo.html"
@@ -591,7 +472,6 @@
     >
         ✦
     </a>
-
 
 </body>
 </html>
